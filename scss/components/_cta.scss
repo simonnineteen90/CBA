@@ -1,0 +1,62 @@
+.cta-text-container {
+   padding-top: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.cta-text {
+    margin-left: 5rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: $color-secondary;
+    font-size: 3rem;
+    text-decoration: none;
+    transition: all .2s;
+    
+
+
+    &:hover {
+        font-size: 3.2rem;
+        background: $color-secondary;
+        padding: 2rem 4rem 2rem 2rem;
+        color: $color-white;
+
+        -webkit-clip-path: polygon(0% 0%, 92% 0, 100% 50%, 93% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 92% 0, 100% 50%, 93% 100%, 0% 100%);
+
+        
+    }
+
+}
+
+// mobile
+@media only screen and (max-width: 980px) { 
+
+    .cta-text-container {
+        padding-top: 0;
+        margin:2% 10% 5% 10%;
+        display: flex;
+         flex-direction: row;
+         justify-content: flex-start;
+     
+     }
+     
+     .cta-text {
+         margin:1rem;
+         font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+         color: $color-secondary;
+         font-size: 2.2rem;
+         text-decoration: none;
+         
+     
+     
+         &:hover {
+            color: $color-white;
+            font-size: 2.6rem;
+         }
+     
+     }
+
+
+}

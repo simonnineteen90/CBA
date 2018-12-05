@@ -1,0 +1,108 @@
+// nav
+
+.nav-container {
+    padding: 1.8rem;
+    background-color: $color-nav-background;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav {
+    width: 108rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: $color-primary;
+    display: flex;
+    justify-content: space-between;
+
+    &-logo-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &-logo{
+        margin-left: 2.5rem;
+    
+    }
+
+
+    &-item {
+        
+        padding: 0.5rem 1.5rem;
+        font-size: 1.8rem;
+        
+        
+        & a {
+            text-decoration: none;
+            color: $color-primary;
+
+            &:hover {
+                color:$color-secondary;
+                transition: 0.1;
+            }
+        }
+
+    &-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    }
+  
+}
+
+//potenitallty delete this
+/* .mobie-menu-container {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.mobile-menu {
+    display:none;
+
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+
+// mobile nav
+
+@media only screen and (max-width: 980px) {
+    .main-nav-item-container,
+    .main-nav-item {
+        flex-direction: column;
+        
+    }
+
+    .main-nav-item {
+        display: none;
+        text-align: right;
+    }
+
+    //potenitallty delete this
+   /*  .mobie-menu-container {
+        display: flex;
+        justify-content: flex-end;
+    } */
+
+    .mobile-menu {
+        display: flex;
+        justify-content: flex-end;
+        //position: absolute;
+        cursor: pointer;
+        
+        padding: 0.5rem 1.5rem;
+        font-size: 1.8rem;
+
+    
+    }
+
+    .nav-toggle {
+        display: flex;
+        
+    }
+}

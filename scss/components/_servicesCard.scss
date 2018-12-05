@@ -1,0 +1,122 @@
+.services-background {
+    background-color: rgba(244, 244, 244, 1);
+    padding:10rem 0rem;
+    min-height:80vh;
+    max-height: auto;
+
+
+}
+
+.card-container {
+    margin: 0 auto;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.card-container:hover .card:not(:hover) {
+    transform: scale(0.9);
+}
+
+.card {
+    background-color:rgba(209,209,209,1);
+    flex:1;
+    padding: 2rem;
+    margin: 0 5rem;
+    box-shadow: 2px 2px 5px rgba(10,10,10,.3);   
+    position: relative;
+    min-height: 50rem;
+    max-height: 60rem;
+    transition: transform, color, background-color, .3s;
+    
+    
+
+    &:hover {
+        transform: translateY(-4rem);
+        background-color: $color-secondary;
+        color: $color-white;
+
+        //below targets the background image for the card when hovered
+       /*  & .card-image {
+            width: 110%;
+        } */
+    }
+
+    &-image {
+        background-size: cover;
+        background-position: center center;
+        height: 25rem;
+        width:100%;
+        margin-bottom: 2rem;
+        position: absolute;
+        top:0;
+        left:0;
+
+        &-1 {
+            background-image: url(/images/slider-1.jpg);
+        }
+    }
+}
+
+.card-text {
+    margin: 2rem;
+    position: absolute;
+    top: 26rem;
+    left: 2rem;
+}
+
+// mobile
+@media only screen and (max-width: 980px) { 
+    .services-background {
+        background-color: rgba(244, 244, 244, 1);
+        padding-top: 2rem;
+        height:210rem;
+    
+    }
+
+    .card-container {
+        margin: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 180rem;
+        
+        
+  }
+
+  .card {
+      margin: 5% 5rem;
+      height:auto;
+     
+
+      &-image {
+          height: 35rem;
+      }
+  }
+
+.card-text {
+    margin: 2rem;
+    position: absolute;
+    top: 67%;
+    left: 2rem;
+}
+  
+}
+
+@media only screen and (max-width: 500px) {
+   
+   .card {
+    margin: 2rem 0;
+   }
+
+   .card-text {
+       margin: 1rem 2rem;
+       top: 64%;
+       left:0;
+   }
+    
+
+}

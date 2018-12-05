@@ -1,0 +1,53 @@
+
+
+.header {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+
+    &-slide {
+        font-size: 3.6rem;
+    }
+}
+
+.body-copy {
+    font-family: 'source-sans-pro', Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+}
+
+.services-header{
+     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+     font-size: 1.8rem;
+}
+
+.portfolio-heading{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 3.4rem;
+}
+
+
+.portfolio-title {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: 1px 1px 3px rgba(40,40,40,.7);
+    z-index: 5;
+ }
+
+ .footer-txt{
+    color: $color-grey-light;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight:400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+
+    &-bottom {
+        color: $color-grey-medium;
+    }
+
+    & > ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -1,0 +1,36 @@
+//abstracts
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+
+//base
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+
+//components
+@import "components/about";
+@import "components/btn";
+@import "components/cta";
+@import "components/nav";
+@import "components/portfolio";
+@import "components/slider";
+@import "components/servicesCard";
+
+
+
+//layout
+@import "layout/contact";
+@import "layout/footer";
+
+
+
+
+
+
+
+
+//pages

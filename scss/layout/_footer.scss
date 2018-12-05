@@ -1,0 +1,42 @@
+.footer-background{
+    padding: 2rem 0rem;
+    height: auto;
+    background-color: $color-grey-dark;
+}
+
+.footer-container {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &-bottom {
+        display:flex;
+        justify-content: space-around;
+    }
+}
+
+
+.footer-col {
+    flex: 0 1 auto;
+    padding: 10px;
+    margin: auto 10rem auto 0;
+    height:auto;
+}
+
+.footer-menu a {
+    text-decoration:none;
+
+    &:visited {
+        color: $color-white;
+    }
+}
+
+
+@media only screen and (max-width: 980px) {
+    .footer-container {
+       flex-direction: column;
+       justify-content: space-around;
+    }
+}

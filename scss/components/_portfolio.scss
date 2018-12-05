@@ -1,0 +1,179 @@
+// not sure if i will need this mixin
+
+
+.portfolio--container {
+
+    min-height: 100vh;
+
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1300px;
+
+}
+
+
+.portfolio--card {
+    color: inherit;
+  cursor: pointer;
+  width: calc(33% - 4rem);
+  min-width: calc(33% - 4rem);
+  height: 400px;
+  min-height: 400px;
+  perspective: 1000px;
+  margin: 2rem;
+  position: relative;
+ 
+  @include mobile (980px) {
+    width: calc(50% - 10rem);
+  }
+ 
+  @include mobile (650px) {
+    width: 100%;
+  }
+
+
+    &__front, &__back {
+
+        display: flex;
+        border-radius: 6px;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: ease-in-out 600ms;
+        // overflow: hidden;
+
+}
+
+    &__front {
+        background-size: cover;
+        // background-blend-mode: overlay;
+        padding: 4rem;
+        font-size: 1.618rem;
+        font-weight: 600;
+        color: #fff;
+        overflow: hidden;
+        font-family: sans-serif;
+        align-items: flex-end;
+        
+        
+        &:before {
+          position: absolute;
+          display: block;
+          content: '';
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, adjust-hue($color-secondary, -20deg), $color-secondary);
+          opacity: .25;
+          z-index: -1;
+        }
+
+    }
+
+
+
+}
+
+// both the card and the specific side have to be told what to do on hover - so we select both
+// this could be refactored into SCSS if you are feeling brave
+.portfolio--card:hover .portfolio--card__front {
+    transform: rotateY(180deg);
+}
+
+.portfolio--card:nth-child(even):hover .portfolio--card__front  {
+    transform: rotateY(-180deg); //even numbers flip the opposite way
+  }
+
+
+
+
+.portfolio--card__back {
+    background: #ddd;
+    transform: rotateY(-180deg);
+    padding: 0 2em;
+    flex-direction: column;
+}
+ 
+// both the card and the specific side have to be told what to do on hover - so we select both
+// this could be refactored into SCSS if you are feeling brave
+.portfolio--card:hover .portfolio--card__back {
+    transform: rotateY(0deg);
+    }
+        
+.portfolio--card:nth-child(even) .portfolio--card__back {
+    transform: rotateY(180deg);
+        }
+        
+.portfolio--card:nth-child(even):hover .portfolio--card__back {
+     transform: rotateY(0deg);
+        }
+    
+
+//style the button on back of card
+
+.card--btn {
+    $height: 40px;
+    transform: translateZ($height);
+    cursor: pointer;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-weight: bold;
+    color: #fff;
+    padding: 1rem 2.2rem;
+    border-radius: 100px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif ;
+    font-size: 1.3rem;
+    font-weight: 400;
+    background: $color-secondary;
+    border: none;
+    position: relative;
+      transform-style: preserve-3d;
+    transition: 300ms ease;
+
+    margin-top: 2.5rem;
+    
+    &:before {
+    transition: 300ms ease;
+      position: absolute;
+      display: block;
+      content: '';
+      transform: translateZ(-$height);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+      border-radius: 100px;
+      left: 10px;
+      top: 16px;
+      box-shadow: 0 0 10px 10px rgba($color-secondary, 0.25);
+      background-color: rgba($color-secondary, 0.25);
+    }
+    
+    &:hover {
+      transform: translateZ($height + 15px);
+      &:before {
+        transform: translateZ(-($height + 15px));
+      }
+    }
+   
+    &:active {
+      transform: translateZ($height/2);
+     
+      &:before {
+        transform: translateZ(-($height/2));
+          top: 12px;
+      }
+    }
+  }

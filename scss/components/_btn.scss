@@ -1,0 +1,77 @@
+.btn-container-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.btn {
+    
+    &:link, :visited{
+        padding:  1rem 2rem;
+        font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+        text-decoration:none;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        border-radius: 10rem;
+        transition: transform .3s;
+        -webkit-box-shadow: 0 8px 15px 0px rgba(0,0,0,.25);
+        -moz-box-shadow: 0 8px 15px 0px rgba(0,0,0,.25);
+        box-shadow: 0 8px 15px 0px rgba(0,0,0,.25);
+    }
+
+    
+
+    &:hover{
+        
+        transform: translateY(-.3rem);
+    }
+
+    &:active {
+        transform: translateY(-.1rem);
+        -webkit-box-shadow: 0 4px 5px 0px rgba(0,0,0,.25);
+        -moz-box-shadow: 0 4px 5px 0px rgba(0,0,0,.25);
+        box-shadow: 0 4px 5px 0px rgba(0,0,0,.25);
+     
+    }
+    
+
+    &-primary {
+        color:$color-white;
+        border: 2px $color-secondary solid;
+        background-color: $color-secondary;
+        }
+
+    &-secondary {
+        color:$color-secondary;
+        border: 2px $color-secondary solid;
+        background-color: $color-white;
+    }
+
+
+    &-slider {
+
+        color: $color-secondary;
+        border: 2px $color-white solid;
+        background-color: $color-white;
+
+        margin-right: 4rem;
+
+       /*  position: absolute;
+        top: 67%;
+        left: 20%; */
+    }
+
+    &-slider-right {
+        color: $color-white;
+        border: 2px $color-secondary solid;
+        background-color: $color-secondary;
+
+       /*  position: absolute;
+        top: 67%;
+        left: 33%; */
+
+    }
+
+}
+

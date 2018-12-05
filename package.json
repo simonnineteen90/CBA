@@ -1,0 +1,15 @@
+{
+  "name": "cba_asbestos_flexbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass scss/main.scss css/styles.css -w"
+  },
+  "author": "Simon Dunn",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
